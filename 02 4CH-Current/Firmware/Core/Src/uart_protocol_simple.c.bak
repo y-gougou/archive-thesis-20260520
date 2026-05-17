@@ -1,0 +1,66 @@
+/**
+ ******************************************************************************
+ * @file           : uart_protocol_simple.c
+ * @brief          : 简化的CSV文本协议 - 用于电流传感器数据发送
+ * @author         : 4CH-Current Project
+ *
+ * 协议格式:
+ *   $CH,ch0,ch1,ch2,ch3\n
+ *   例如: $CH,0.123,-0.184,0.250,0.000\n
+ *
+ * 波特率: 115200
+ * 发送频率: 约100Hz (由UART_SEND_INTERVAL_MS控制)
+ ******************************************************************************
+ */
+
+#include "uart_protocol.h"
+#include "usart.h"
+#include "current_types.h"
+#include <stdio.h>
+
+/* 当前固件使用 UART_PROTOCOL_TYPE = 1 (FireWater CSV)
+ * 但为了更可靠，我们使用自定义的简单CSV格式 */
+
+extern float g_current_values[CHANNEL_COUNT];
+
+/**
+ * @brief 使用简化CSV协议发送电流数据
+ *
+ * 格式: $CH,ch0,ch1,ch2,ch3\n
+ * 例如: $CH,0.123,-0.184,0.250,0.000\n
+ */
+void protocol_send_current_data_simple(void)
+{
+    char buf[64];
+    /* 格式: $CH,ch0,ch1,ch2,ch3\r\n */
+    int len = snprintf(buf, sizeof(buf),
+                        "$CH,%.4f,%.4f,%.4f,%.4f\r\n",
+                        g_current_values[0],
+                        g_current_values[1],
+                        g_current_values[2],
+                        g_current_values[3]);
+
+    if (len > 0) {
+        /* 使用USART2发送 (PA2=TX) */
+        HAL_UART_Transmit(&huart2, (uint8_t*)buf, len, 100);
+    }
+}
+
+/**
+ * @brief 原始ADC数据发送 (CSV格式)
+ */
+void protocol_send_raw_adc_simple(void)
+{
+    extern volatile uint16_t g_adc_raw_buffer[CHANNEL_COUNT];
+    char buf[64];
+    int len = snprintf(buf, sizeof(buf),
+                        "$RA,%d,%d,%d,%d\r\n",
+                        g_adc_raw_buffer[0],
+                        g_adc_raw_buffer[1],
+                        g_adc_raw_buffer[2],
+                        g_adc_raw_buffer[3]);
+
+    if (len > 0) {
+        HAL_UART_Transmit(&huart2, (uint8_t*)buf, len, 100);
+    }
+}

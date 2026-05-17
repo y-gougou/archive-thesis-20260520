@@ -1,0 +1,7 @@
+﻿csv_file,path,label,label_name,speed,run_index
+normal_vx0.5_run02.csv,C:\Users\86141\Desktop\last dance\shuju0517\normal\normal_vx0.5_run02.csv,0,normal,0.5,2
+normal_vx0.5_run12.csv,C:\Users\86141\Desktop\last dance\shuju0517\normal\normal_vx0.5_run12.csv,0,normal,0.5,12
+wheel_slip_B_vx0.5_run9.csv,C:\Users\86141\Desktop\last dance\shuju0517\wheel_slip\wheel_slip_B_vx0.5_run9.csv,1,wheel_slip,0.5,9
+wheel_slip_B_vx0.5_run12.csv,C:\Users\86141\Desktop\last dance\shuju0517\wheel_slip\wheel_slip_B_vx0.5_run12.csv,1,wheel_slip,0.5,12
+drive_abnormal_B_alpha0.3_vx0.5_run13.csv,C:\Users\86141\Desktop\last dance\shuju0517\drive fault\drive_abnormal_B_alpha0.3_vx0.5_run13.csv,2,drive_abnormal,0.5,13
+shaft_eccentricity_C_vx0.5_run04.csv,C:\Users\86141\Desktop\last dance\shuju0517\shaft eccentricity\shaft_eccentricity_C_vx0.5_run04.csv,3,shaft_eccentricity,0.5,4

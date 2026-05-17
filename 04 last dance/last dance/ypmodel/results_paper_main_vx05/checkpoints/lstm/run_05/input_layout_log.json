@@ -1,0 +1,3 @@
+{
+  "input_transpose": "input_transpose: [N,15,50] -> [N,50,15]"
+}

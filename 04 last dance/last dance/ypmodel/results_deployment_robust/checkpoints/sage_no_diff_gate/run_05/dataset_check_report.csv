@@ -1,0 +1,4 @@
+﻿mode,split,file_count,label_file_counts,speed_file_counts,x_shape,y_shape,label_window_counts,speed_window_counts,has_nan,has_inf,scaler_source,near_zero_std_channels
+deployment_robust,train,46,"{""0"": 13, ""1"": 15, ""2"": 11, ""3"": 7}","{""0.3"": 8, ""0.5"": 32, ""0.7"": 6}","[5764, 15, 50]",[5764],"{""0"": 1570, ""1"": 1913, ""2"": 1549, ""3"": 732}","{""0.3"": 1208, ""0.5"": 3996, ""0.7"": 560}",False,False,train,[]
+deployment_robust,val,10,"{""0"": 3, ""1"": 3, ""2"": 2, ""3"": 2}","{""0.5"": 8, ""0.7"": 2}","[1293, 15, 50]",[1293],"{""0"": 387, ""1"": 408, ""2"": 328, ""3"": 170}","{""0.5"": 1067, ""0.7"": 226}",False,False,train,[]
+deployment_robust,test,10,"{""0"": 3, ""1"": 3, ""2"": 3, ""3"": 1}","{""0.5"": 10}","[1444, 15, 50]",[1444],"{""0"": 465, ""1"": 439, ""2"": 440, ""3"": 100}","{""0.5"": 1444}",False,False,train,[]

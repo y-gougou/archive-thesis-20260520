@@ -1,0 +1,11 @@
+# 4CH-Current 校准工具依赖
+# 安装方式: pip install -r requirements.txt
+
+# 串口通信
+pyserial>=3.5
+
+# 数值计算和线性回归
+numpy>=1.24.0
+
+# 曲线绘图
+matplotlib>=3.7.0

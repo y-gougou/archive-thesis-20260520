@@ -1,0 +1,30 @@
+{
+  "csv_file": "C:\\Users\\86141\\Desktop\\last dance\\shuju0517\\normal\\normal_vx0.5_run03.csv",
+  "window_count": 101,
+  "raw_counts": {
+    "normal": 100,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 1
+  },
+  "majority_counts": {
+    "normal": 97,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 0
+  },
+  "probability_moving_average_counts": {
+    "normal": 97,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 0
+  },
+  "mean_raw_confidence": 0.9396283626556396,
+  "postprocess": {
+    "method": "majority_vote",
+    "window_count": 5,
+    "warning_threshold": 0.6,
+    "fault_threshold": 0.8,
+    "confirm_count": 4
+  }
+}

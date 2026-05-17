@@ -1,0 +1,46 @@
+{
+  "input_shape": [
+    1,
+    15,
+    50
+  ],
+  "input_layout": "batch,channel,time",
+  "window_size": 50,
+  "step_size": 10,
+  "feature_columns": [
+    "odom_vx",
+    "odom_vy",
+    "odom_wz",
+    "wheel_speed0",
+    "wheel_speed1",
+    "wheel_speed2",
+    "imu_ax",
+    "imu_ay",
+    "imu_az",
+    "imu_gx",
+    "imu_gy",
+    "imu_gz",
+    "current0",
+    "current1",
+    "current2"
+  ],
+  "label_map": {
+    "normal": 0,
+    "wheel_slip": 1,
+    "drive_abnormal": 2,
+    "shaft_eccentricity": 3
+  },
+  "normal_label": 0,
+  "postprocess": {
+    "method": "probability_moving_average",
+    "window_count": 5,
+    "warning_threshold": 0.6,
+    "fault_threshold": 0.8,
+    "confirm_count": 4
+  },
+  "selected_by": "highest_val_macro_f1",
+  "model": "sage_cnn",
+  "run_id": 3,
+  "onnx_exporter": "torch_export_dynamo",
+  "onnx_opset_version": 18
+}

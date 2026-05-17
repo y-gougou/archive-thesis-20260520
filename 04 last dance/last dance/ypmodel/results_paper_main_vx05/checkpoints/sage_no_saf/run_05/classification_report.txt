@@ -1,0 +1,10 @@
+﻿                    precision    recall  f1-score   support
+
+            normal     0.9444    1.0000    0.9714       340
+        wheel_slip     1.0000    1.0000    1.0000       392
+    drive_abnormal     1.0000    1.0000    1.0000       297
+shaft_eccentricity     1.0000    0.8246    0.9038       114
+
+          accuracy                         0.9825      1143
+         macro avg     0.9861    0.9561    0.9688      1143
+      weighted avg     0.9835    0.9825    0.9819      1143

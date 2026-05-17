@@ -1,0 +1,17 @@
+[
+  "odom_vx",
+  "odom_vy",
+  "odom_wz",
+  "wheel_speed0",
+  "wheel_speed1",
+  "wheel_speed2",
+  "imu_ax",
+  "imu_ay",
+  "imu_az",
+  "imu_gx",
+  "imu_gy",
+  "imu_gz",
+  "current0",
+  "current1",
+  "current2"
+]

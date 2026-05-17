@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- 4-Channel Current Sensor Launch File -->
+  
+  <arg name="port" default="/dev/ttyUSB0" />
+  <arg name="baudrate" default="115200" />
+  <arg name="publish_rate" default="10.0" />
+  
+  <node name="ch4_current_sensor" pkg="ch4_current_sensor" type="sensor_node.py" output="screen">
+    <param name="port" value="$(arg port)" />
+    <param name="baudrate" value="$(arg baudrate)" />
+    <param name="publish_rate" value="$(arg publish_rate)" />
+  </node>
+
+  <!-- Optional: rqt_plot for visualization -->
+  <!-- <node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" 
+        args="/current_data/ch0_current /current_data/ch1_current /current_data/ch2_current /current_data/ch3_current" /> -->
+
+</launch>

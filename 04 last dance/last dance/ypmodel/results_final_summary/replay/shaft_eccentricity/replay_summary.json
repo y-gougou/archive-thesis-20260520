@@ -1,0 +1,30 @@
+{
+  "csv_file": "C:\\Users\\86141\\Desktop\\last dance\\shuju0517\\shaft eccentricity\\shaft_eccentricity_C_vx0.5_run06.csv",
+  "window_count": 97,
+  "raw_counts": {
+    "normal": 0,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 97
+  },
+  "majority_counts": {
+    "normal": 0,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 93
+  },
+  "probability_moving_average_counts": {
+    "normal": 0,
+    "wheel_slip": 0,
+    "drive_abnormal": 0,
+    "shaft_eccentricity": 93
+  },
+  "mean_raw_confidence": 0.9683193564414978,
+  "postprocess": {
+    "method": "majority_vote",
+    "window_count": 5,
+    "warning_threshold": 0.6,
+    "fault_threshold": 0.8,
+    "confirm_count": 4
+  }
+}

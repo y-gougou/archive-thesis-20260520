@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ypp/Desktop/4CH-Current\\(1\\)/4CH-Current\\(1\\)/4CH-Current/Firmware/**)",
+      "Read(//c/Users/ypp/Desktop/4CH-Current\\(1\\)/4CH-Current\\(1\\)/4CH-Current/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ypp\\Desktop\\4CH-Current(1)\\4CH-Current(1)\\4CH-Current\\Firmware\\Core\\Inc",
+      "C:\\Users\\ypp\\Desktop\\4CH-Current(1)\\4CH-Current(1)\\4CH-Current\\Firmware\\Core\\Src"
+    ]
+  }
+}
