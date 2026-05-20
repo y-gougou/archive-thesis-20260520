@@ -38,9 +38,9 @@
     "fault_threshold": 0.8,
     "confirm_count": 4
   },
-  "selected_by": "highest_val_macro_f1",
-  "model": "sage_cnn",
+  "selected_by": "highest_val_macro_f1_among_sage_no_saf_runs",
+  "model": "sage_no_saf",
   "run_id": 3,
-  "onnx_exporter": "torch_export_dynamo",
-  "onnx_opset_version": 18
+  "onnx_exporter": "torch_export_legacy",
+  "onnx_opset_version": 14
 }

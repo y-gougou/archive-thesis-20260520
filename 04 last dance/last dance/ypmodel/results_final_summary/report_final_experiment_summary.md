@@ -6,7 +6,13 @@ The final experiment materials use the fixed four-class label order: `0 normal`,
 
 `odom_vx, odom_vy, odom_wz, wheel_speed0, wheel_speed1, wheel_speed2, imu_ax, imu_ay, imu_az, imu_gx, imu_gy, imu_gz, current0, current1, current2`
 
-The unified input layout is `[N, 15, 50]`, namely batch/channel/time. The scaler, feature order, and label map are kept consistent with the deployed desktop ONNX package.
+The unified input layout is `[N, 15, 50]`, namely batch/channel/time.
+
+**Split strategy**: Stratified random split by fault label. Within each class, CSV files are sorted by `(speed, run_index, filename)` and then shuffled with a fixed seed before splitting. The split ratios are `70% / 10% / 20%` (train/val/test) for the main experiment and `70% / 15% / 15%` for deployment robustness. Each of the 5 independent runs uses a different seed (`base_seed + run_id - 1`).
+
+**Normalization**: StandardScaler (Z-score, mean subtraction and division by std) is fitted on the training split only and then applied to validation and test splits.
+
+The scaler, feature order, and label map are kept consistent with the deployed desktop ONNX package.
 
 ## 2. Main-condition Diagnosis Results
 

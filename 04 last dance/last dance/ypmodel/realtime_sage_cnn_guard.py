@@ -15,8 +15,8 @@ from models import build_model
 
 LABEL_NAMES = {
     0: "normal",
-    1: "drive_abnormal",
-    2: "wheel_slip",
+    1: "wheel_slip",
+    2: "drive_abnormal",
     3: "shaft_eccentricity",
 }
 
@@ -99,7 +99,7 @@ class SAGECNNRealtimeGuard:
 
     def _load_model(self):
         checkpoint = torch.load(self.config.checkpoint_path, map_location=self.device, weights_only=False)
-        model = build_model("sage_cnn", input_channels=self.config.input_channels, num_classes=4)
+        model = build_model("sage_no_saf", input_channels=self.config.input_channels, num_classes=4)
         model.load_state_dict(checkpoint["model_state_dict"], strict=True)
         model.to(self.device)
         model.eval()

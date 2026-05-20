@@ -222,7 +222,7 @@ source devel/setup.bash
 
 **数据流程**：
 1. 原始 CSV（15 通道：里程计 3 + 轮速 3 + IMU 6 + 电流 3）
-2. `preprocess_fault_dataset.py`：滑动窗口（`window_size=50`，`step_size=10`），去头尾 5 秒，Scaler 拟合
+2. `run_experiments.py` 内部处理：滑动窗口（`window_size=50`，`step_size=10`），去头尾 5 秒，按标签分层随机划分（主实验 70/10/20，部署鲁棒性 70/15/15），使用 StandardScaler（仅在训练集上拟合）
 3. 训练 SAGE-CNN（输入 `[N, 15, 50]`，输出 4 类 logits）
 4. 导出 ONNX，部署时通过 `realtime_sage_cnn_guard.py` 做后处理（静态门控、低置信度保护、滑动窗口投票）
 

@@ -32,8 +32,8 @@
     50
   ],
   "input_layout": "channel,time",
-  "source_results": "results_deployment_robust/export",
-  "selected_model": "sage_cnn",
+  "source_results": "results_deployment_robust/checkpoints/sage_no_saf/run_03",
+  "selected_model": "sage_no_saf",
   "selected_run": 3,
-  "note": "Prepared for desktop export. Label order follows the trained model logits: normal, wheel_slip, drive_abnormal, shaft_eccentricity."
+  "note": "Switched from full SAGE-CNN to SAGE-CNN w/o SAF for deployment robustness. Although SAF shows comparable performance on in-distribution data, ablation experiments and cross-speed deployment results indicate that removing SAF improves generalization stability (deployment_robust test macro_f1: 0.9344 vs 0.9283). Label order follows the trained model logits: normal, wheel_slip, drive_abnormal, shaft_eccentricity."
 }

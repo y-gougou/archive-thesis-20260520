@@ -34,8 +34,8 @@ except ModuleNotFoundError:
 
 LABEL_NAMES = {
     0: "normal",
-    1: "drive_abnormal",
-    2: "wheel_slip",
+    1: "wheel_slip",
+    2: "drive_abnormal",
     3: "shaft_eccentricity",
 }
 

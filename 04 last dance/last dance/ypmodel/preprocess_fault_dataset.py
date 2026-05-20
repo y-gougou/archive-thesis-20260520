@@ -21,8 +21,8 @@ MODEL_FEATURES = [
 
 LABEL_MAP = {
     "normal": 0,
-    "drive_abnormal": 1,
-    "wheel_slip": 2,
+    "wheel_slip": 1,
+    "drive_abnormal": 2,
     "shaft_eccentricity": 3,
 }
 
